@@ -1,0 +1,58 @@
+div#detailDetail{
+    font-family: 'メイリオ','Meiryo UI';
+}
+
+*{
+    font-family: 'メイリオ';
+    font-size: 12px;
+}
+
+table.gray{
+    background-color: #e6e6e6;
+}
+
+table.green caption{
+    color: #009933;
+}
+
+table.green{
+    background-color: #ccffd4;
+    border-color: #093;
+}
+
+table.green caption{
+    color: #009933;
+}
+
+table.yellow{
+    background-color: #ffffb3;
+    border-color: #ff8c00;
+}
+
+table.yellow>caption{
+    color: #ff8000;
+}
+
+table.red{
+    background-color: #ffcccc;
+    border-color: #ff0000;
+    border-collapse: separate;
+    border-spacing: 0px;
+    margin-left: 24px;
+    padding: 12px;
+}
+
+table.red caption{
+    text-align: left;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+table th, table td{
+    padding: 0px;
+    border-style: none;
+}
+
+/*table{
+    font-size: 12px;
+}*/
