@@ -1,58 +1,63 @@
 div#detailDetail{
     font-family: 'メイリオ','Meiryo UI';
-}
-
-*{
-    font-family: 'メイリオ';
     font-size: 12px;
 }
 
-table.gray{
-    background-color: #e6e6e6;
-}
 
-table.green caption{
-    color: #009933;
-}
-
-table.green{
-    background-color: #ccffd4;
-    border-color: #093;
-}
-
-table.green caption{
-    color: #009933;
-}
-
-table.yellow{
-    background-color: #ffffb3;
-    border-color: #ff8c00;
-}
-
-table.yellow>caption{
-    color: #ff8000;
-}
-
-table.red{
-    background-color: #ffcccc;
-    border-color: #ff0000;
+/*共通用*/
+table.gray, table.green, table.yellow, table.red{
     border-collapse: separate;
     border-spacing: 0px;
-    margin-left: 24px;
-    padding: 12px;
+    margin-left: 30px;
+    padding: 15px;
 }
 
-table.red caption{
+table.gray caption, table.green caption, table.yellow caption, table.red caption{
     text-align: left;
-    color: #ff0000;
     font-weight: bold;
 }
 
-table th, table td{
+/*聞き取りテンプレート（gray）*/
+table.gray{
+    background-color: #e6e6e6;
+    border: #808080 solid 1px;
+}
+
+table.gray caption{
+    color: #696969;
+}
+
+/*補足情報（green）*/
+table.green{
+    background-color: #ccffd4;
+    border: #009933 solid 1px;
+}
+
+table.green caption{
+    color: #009933;
+}
+
+/*案内注意（yellow）*/
+table.yellow{
+    background-color: #ffffb3;
+    border: #ff8c00 solid 1px;
+}
+
+table.yellow caption{
+    color: #ff8000;
+}
+
+/*案内禁止（red）*/
+table.red{
+    background-color: #ffcccc;
+    border: #ff0000 solid 1px;
+}
+
+table.red caption{
+    color: #ff0000;
+}
+
+table td{
     padding: 0px;
     border-style: none;
 }
-
-/*table{
-    font-size: 12px;
-}*/
