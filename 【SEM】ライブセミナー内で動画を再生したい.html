@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<head>
+    <meta charset="UTF-8" />
+    <title>作業用ページ</title>
+</head>
+<!-- ■■■タイトルここから■■■ -->
+<span style="font-family:メイリオ,meiryo; font-size:20px;"><strong>【FAQ】 ASへNASのファイルを添付する方法</strong></span>
+<!-- ■■■タイトルここまで■■■ -->
+<br />
+<!-- ■■■サブタイトルここから■■■ -->
+<span style="font-family:メイリオ,meiryo; font-size:11px;">
+    <span style="color:#009999;"><strong>【対象製品】</strong></span><br />
+    <span style="color:#009999;"><strong>【対象OS】</strong></span>-<br />
+    <span style="color:#009999;"><strong>【対象デバイス】</strong></span>-
+</span>
+<ul>
+    <li>ASにファイルを添付する方法が知りたいです</li>
+    <li>先生！教えてください！</li>
+</ul>
+<!-- ■■■サブタイトルここまで■■■ -->
+<span style="font-family:メイリオ,meiryo; font-size: 12px;">
+    <!-- ■■■回答タイトルここから■■■ -->
+    <span style="font-size: 8px;">&nbsp;</span>
+    <br />
+    <span style="font-size: 20px;"><strong>以下を参照してください</strong></span>
+    <!-- ■■■回答タイトルここまで■■■ --><br />
+    
+    <!-- ■■■回答内容ここから■■■ --><br />
+    <div style="font-size: 15px; margin-left: 25px"><strong>
+        <a href="#1" style="text-decoration:none; color: rgb(0, 0, 255);" onmouseover="this.style='text-decoration:underline;color:#ff0000;';" onmouseout="this.style='text-decoration:none; color: rgb(0, 0, 255);'" >【1】 添付方法</a><br />
+        <a href="#2" style="text-decoration:none; color: rgb(0, 0, 255);" onmouseover="this.style='text-decoration:underline;color:#ff0000;';" onmouseout="this.style='text-decoration:none; color: rgb(0, 0, 255);'" >【2】 添付したファイルをFirefox・Chromeで開く際の注意点</a><br />
+    </strong></div>
+    <br /><hr /><br />
+    
+    <!--回答1 Start-->
+    <span style="font-size: 15px;"><strong><a name="1">【1】 添付方法</a></strong></span><br />
+    <div style="font-size: 12px; margin-left: 30px"><br />
+        1. 添付したいファイルを下記フォルダにアップロード（コピー）する。<br />
+        \\ns-srv01.niandc.co.jp\V-CUBE\FAQ <br />
+        <br />
+        
+        2. 下記のどちらかお好みの方法でNASのファイルへリンクを貼ってください<br />
+        <div style="font-size: 12px; margin-left: 15px">
+            <div onclick="obj=document.getElementById('1-2-1').style; obj.display=(obj.display=='none')?'block':'none';" style="color: rgb(0, 0, 255); font-size: 12px; cursor: pointer;">
+            <!-- セクションタイトルここから -->
+            <span style="font-weight: bold;">1.AS上の機能を利用する方法</span><br />
+            <!-- セクションタイトルここまで -->
+            </div>
+        
+            <div id="1-2-1" style="clear: both; display: none;　font-size:12px; margin-left: 10px;">
+                ASのHTMLエディタのハイパーリンクを開く。<br />
+                プロトコルを「&lt;その他の&gt;」に変更し、URLに下記のような形でファイルパスを記載する。<br />
+                file://///ns-srv01.niandc.co.jp/V-CUBE/FAQ/ファイル名<br />
+                例）file://///ns-srv01.niandc.co.jp/V-CUBE/FAQ/test.html<br />
+             注意！必ずfile:の後のスラッシュは5個入れること！<br />
+            </div><br />
+            
+            <div onclick="obj=document.getElementById('1-2-2').style; obj.display=(obj.display=='none')?'block':'none';" style="color: rgb(0, 0, 255); font-size: 12px; cursor: pointer;">
+            <!-- セクションタイトルここから -->
+            <span style="font-weight: bold;">2-2.HTMLタグを利用する方法</span><br />
+            <!-- セクションタイトルここまで -->
+            </div>
+                        
+            <div id="1-2-2" style="clear: both; display: none;　font-size:12px; margin-left: 10px;">
+            aタグのリンク先を下記の形にする。<br />
+            file://///ns-srv01.niandc.co.jp/V-CUBE/FAQ/ファイル名<br />
+            例）&lt;a href="file://///ns-srv01.niandc.co.jp\V-CUBE\test.html"&gt;file://///ns-srv01.niandc.co.jp\V-CUBE\test.html&lt;/a&gt;<br />
+            注意！必ずfile:の後のスラッシュは5個入れること！<br />
+            </div><br />
+            
+            <table border="1" bordercolor="#ff8c00" cellpadding="15" cellspacing="0" style="margin-left:5px;">
+                <caption>
+                    <div style="text-align: left;"><span style="color: #ff8000; font-family:メイリオ,meiryo; font-size: 12px;"><strong>案内注意</strong></span></div>
+                </caption>
+                <tbody>
+                    <tr><td style="border: none; background-color: #ffffb3; font-family:メイリオ,meiryo; font-size: 12px;">
+                        IEやChromeは比較的ルーズにリンクを書いても認識してくれることが多いですが<br />
+                        Firefoxは厳格なのかバグなのかわかりませんが、以下のような記載でないとリンクとして認識しません。<br />
+            "file:<span style="color: #FF0000;">/////</span>ns-srv01.niandc.co.jp\V-CUBE\test.html"<br />
+            ↑スラッシュを5つ入れてください。
+                    </td></tr>
+                </tbody>
+            </table>
+        </div>       
+    </div>
+    <!--回答1 End-->
+    <br /><hr /><br />
+    
+    <!--回答2 Start -->
+    <span style="font-size: 15px;"><strong><a name="2">【2】添付したファイルをFirefox・Chromeで開く際の注意点</a></strong></span>
+    <div style="font-size: 12px; margin-left: 30px">
+        Firefox・Chromeではfile://プロトコルをセキュリティの観点からリンクとして認識しないような設定になっています。
+        下記の対処法を行うことで、アクセスできるようになります。
+        <div onclick="obj=document.getElementById('2-1').style; obj.display=(obj.display=='none')?'block':'none';" style="color: rgb(0, 0, 255); font-size: 12px; cursor: pointer; margin-left: 30px;">
+            <!-- セクションタイトルここから -->
+            Firefoxの場合<br />
+            <!-- セクションタイトルここまで -->
+        </div>
+    
+        <div id="2-1" style="clear: both; display: none;　font-size:12px; margin-left: 35px;">
+            1.Win＋Rを押下し、「ファイル名を指定して実行」ウィンドウを開く。<br />
+            2.入力欄をコピー＆ペーストして「OK」を押下し、Firefoxのプロファイルフォルダを開く。<br />
+            %appdata%\Mozilla\Firefox\Profiles<br />
+            3.「ランダムな文字列 ＋ .default」という形の名前のフォルダがあるので開き、必要なファイルを
+            <a href="file://///ns-srv01.niandc.co.jp\V-CUBE\Firefox.zip" style="text-decoration:none;" onmouseover="this.style='text-decoration:underline;color:#ff0000;';" onmouseout="this.style='text-decoration:none;'">ここクリックしてダウンロード</a>する。<br />
+        </div><br />
+        <div onclick="obj=document.getElementById('2-2').style; obj.display=(obj.display=='none')?'block':'none';" style="color: rgb(0, 0, 255); font-size: 12px; cursor: pointer; margin-left: 30px;">
+            <!-- セクションタイトルここから -->
+            Chromeの場合<br />
+            <!-- セクションタイトルここまで -->
+        </div>
+    
+        <div id="2-2" style="clear: both; display: none;　font-size:12px; margin-left: 35px;">
+            1.下記URLまたは<a href="https://chrome.google.com/webstore/detail/ローカルファイルリンク有効化/nikfmfgobenbhmocjaaboihbeocackld?hl=ja" style="text-decoration:none; color: rgb(0, 0, 255);" onmouseover="this.style='text-decoration:underline;color:#ff0000;';" onmouseout="this.style='text-decoration:none; color: rgb(0, 0, 255);'">こちら</a>
+            をクリックして、Chromeウェブストアを開く。<br />  
+            2.開いたページの右上に「CHROMEに追加する」といった青いボタンがあるのでクリック。<br />
+            <img src="../../temp/36656f50455a6838453850693443474e414b61637650356c6754587974767051666e63437951714b38796633756f6e766161416853673d3d.png" /><br /><br />
+            3.ページ上部にポップアップが表示されるので、「拡張機能を追加」をクリック。<br />
+            <img src="../../temp/36656f50455a683845384e57684b38316d6578425943483459467659494265306f2b423977622f44546549597864784745434b4c71673d3d.png" /><br />
+        </div><br />
+    </div>
+    
+    
+    
+    
+    <!--回答2 End -->
+    <!-- ■■■回答内容ここまで■■■ -->
+</span>
